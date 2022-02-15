@@ -20,10 +20,18 @@ class MainActivity : AppCompatActivity() {
             val id = idEditText.text.toString()
             val password = passwordEditText.text.toString()
 
-            if (id == adminId && password == adminPassword) {
-                Toast.makeText(this, "관리자님 환영합니다.", Toast.LENGTH_SHORT).show()
+//            if (id == adminId && password == adminPassword) {
+//                Toast.makeText(this, "관리자님 환영합니다.", Toast.LENGTH_SHORT).show()
+//            } else {
+//                Toast.makeText(this, "로그인에 실패했습니다.", Toast.LENGTH_SHORT).show()
+//            }
+
+            if (id != adminId) {
+                Toast.makeText(this, "아이디가 잘못되었습니다.", Toast.LENGTH_SHORT).show()
+            } else if (password != adminPassword) {
+                Toast.makeText(this, "비밀번호가 잘못되었습니다.", Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(this, "로그인에 실패했습니다.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "관리자님 환영합니다.", Toast.LENGTH_SHORT).show()
             }
 
         }
